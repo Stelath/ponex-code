@@ -34,7 +34,7 @@ def main():
             # if movement isnt true send message
             data = frame.reshape((24, 32))
             heatmap.save_heatmap_to_img(data, 'heatmap.png')
-            messager.send_message_with_image('Alert your house is burning down!', 'heatmap.png')
+            messager.send_message_with_image('Alert your house is burning down!', 'heatmap.png', '+12102130107')
             break
 
 if __name__ == '__main__':
