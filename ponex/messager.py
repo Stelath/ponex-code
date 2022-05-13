@@ -9,12 +9,11 @@ with open('keys.csv') as file:
     auth_token = content[1]
 client = Client(account_sid, auth_token)
 
-def send_message_with_image(message, image_url, phone_number):
+def send_message_with_image(message, phone_number):
     message = client.messages \
                     .create(
-                        media_url=image_url,
                         body=message,
-                        from_='+18644005538',
+                        messaging_service_sid='MGd9ef1388a610b4ff8886808e30003f4',
                         to=phone_number
                     )
     print(message.sid)
